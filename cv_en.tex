@@ -1,0 +1,118 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[12pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+%%% Русский язык в тексте
+%\usepackage[russian]{babel} % Поддержка русского языка.
+%\usepackage[X2,T2A]{fontenc} % Кодировки
+\usepackage[utf8]{inputenc} % Кодировка TeX-файла
+\usepackage{cmap} % Поддержка русского в PDF
+
+
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Pavel}{Borisov}
+\title{CV}                               % optional, remove / comment the line if not wanted
+\phone[mobile]{+7~(925)~974~77~80}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\email{pzinin@gmail.com}                              % optional, remove / comment the line if not wanted
+%\homepage{https://github.com/pashazz}                         % optional, remove / comment the line if not wanted
+%\social[linkedin]{pashazz}                        % optional, remove / comment the line3 if not wanted
+%\social[twitter]{jdoe}                             % optional, remove / comment the line if not wanted
+\social[github]{pashazz}                              % optional, remove / comment the line if not wanted
+%\extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+\newcommand\mybitem[1]{%
+    \parbox[t]{3mm}{\textbullet}\parbox[t]{10cm}{#1}\\[1.6mm]}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%  -----       resume       ---------------------------------------------------------
+\makecvtitle
+
+
+\section{Summary}
+Born 25.08.1995. 3 years of professional \textbf{Java (Spring Boot)} experience as of mid-2022. GitHub member since 2009 \--- developing various software for 10+ years. Eager to learn new technologies and apply \textbf{design patterns} to enhance the quality of code. Prefer statically typed languages such as \textbf{Java} and \textbf{C++}. Also have a decent \textbf{Python} experience.
+\\
+Able to perform verbal communication in \textbf{Russian} and \textbf{English}.\\
+\\
+
+\section{Skills}
+\begin{itemize}
+\item \textbf{Backend}: Java (Core, Spring Boot), Kotlin,  C++, Python 3, Go
+\item \textbf{Tools}: Git, Jira, Jenkins, Docker, Grafana, Prometheus
+\item \textbf{Languages}: Russian, English
+\end{itemize}
+
+\section{Work Experience}
+\cventry{2022.03 \--- \\now}{Senior Java (Kotlin) Developer}{Tinkoff Bank}{Moscow}{}{
+  \mybitem{Working on a  microservices back-end project at Tinkoff Bank written in \textbf{Kotlin} with Spring OpenFeign}
+}
+
+% \subsection{Vocational}
+\cventry{2020.03 \--- \\2022.01}{Middle Java Developer}{Sberbank}{Moscow}{}{
+  \mybitem{Implemented \textbf{Agile} methodology, attended daily standups and sprint plannings, used Jira for task management}
+  \mybitem{Improved existing Java code using SOLID design principles and object-oriented design patters and developed new features for a clustered Spring Boot application used by thousands of users daily}
+  \mybitem{Delivered a set of new features to a production environment obtaining experience in code review and stress testing
+  \mybitem{Used Kafka with Spring Boot to ship various features related to internal communications between services}
+  \mybitem{Developed an initialization system based on Spring Boot to kickstart Vert.x verticles for a monolith app}
+}}
+\cventry{2019.09 \---\\2020.01}{Java Developer}{Institute for System Programming of the Russian Academy of Sciences}{Moscow}{}{Improved an existing CalDAV software Cosmo Calendar Server written in \textbf{Java} using \textbf{Spring Boot}:
+  \mybitem{Implemented WebDAV groups}
+  \mybitem{Implemented WebDAV Access Control Protocol \--- support for custom (unprotected) access rights for calendar objects stored in \textbf{MySQL} database using \textbf{Hibernate}}
+  \mybitem{Authored the following pull requests:  https://github.com/1and1/cosmo/pull/29 and https://github.com/1and1/cosmo/pull/33}}
+\cventry{2017.09 \---\\2019.08}{Python Developer}{Institute for System Programming of the Russian Academy of Sciences}{Moscow}{}{Design and develop a virualization management web service
+  \mybitem{Worked on a huge open source solution employing a full stack of technologies}
+  \mybitem{Developed a real-time cache solution using RethinkDB}
+  \mybitem{Designed and developed a real-time deployment of virtual machine state changes using Tornado, Graphene, GraphQL and RethinkDB changefeeds}
+  \mybitem{Developed an authorization module for the web service using LDAP users and groups with granular actions granting}
+  \mybitem{Programmed an exporter of XenServer performance/resources usage data into Prometheus using \textbf{Java}}
+  \mybitem{Created a set of scripted dashboards for \textbf{Graphana} using \textbf{Prometheus} as data source showing disk/memory/CPU usage of VMs.
+}}
+\cventry{2016 \---\\2017}{Intern}{Joint Institute for High Temperatures of the Russian Academy of Sciences}{Moscow}{}{\mybitem{Assisted in porting thermophysics data analysis algorithms from Fortran to modern {\bfseries C++} and design an object-oriented architecture for new code}
+  \mybitem{Designed and developed a clean GUI using \textbf{C++, Qt5 and Qwt} for performing calculations and visualising algorithm results}}
+\cventry{2015}{Intern}{Higher School of Economics}{Moscow}{}{Used \textbf{C++, Qt5 and Qwt} to develop a clean GUI for calculatng differential equations using Runge-Kutta method}
+
+\section{Education}
+\cventry{2017 \---\\2019}{Master}{Higher School of Economics}{Moscow}{Faculty of Computer Science}{Software Engineering}
+\cventry{2013 \---\\2017}{Bachelor}{Higher School of Economics}{Moscow}{School of Applied Mathematics}{Applied Informatics}  % arguments 3 to 6 can be left empty
+% \section{Master thesis}
+% \cvitem{title}{\emph{Title}}
+% \cvitem{supervisors}{Supervisors}
+% \cvitem{description}{Short thesis abstract}
+
+\end{document}
+
+
+%% end of file `template.tex'.
